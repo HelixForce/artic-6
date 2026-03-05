@@ -1,0 +1,40 @@
+Qty,Part,Category,Specs,Unit Price (USD),Total (USD),Link
+3,NEMA 23 Stepper Motor 1.9Nm 2.8A 8mm shaft,Motors & Drivers,"57x57x76mm, 8mm D-shaft, 4-wire bipolar",12.00,36.00,https://www.aliexpress.com/w/wholesale-nema-23-stepper-2.8a-8mm-shaft.html
+3,NEMA 17 Stepper Motor 2A 59Ncm 5mm shaft,Motors & Drivers,"42x42x48mm, 1.8deg, 4-wire bipolar",8.00,24.00,https://www.aliexpress.com/w/wholesale-nema-17-stepper-59ncm.html
+8,TMC2209 V1.3 Stepper Driver,Motors & Drivers,"BTT or Fysetc brand, 2A continuous, StallGuard4, UART",3.00,24.00,https://www.aliexpress.com/w/wholesale-tmc2209-v1.3-bigtreetech.html
+4,GT2 20T Pulley 8mm bore aluminum,Gear Reduction,Fits NEMA 23 8mm shaft,1.50,6.00,https://www.aliexpress.com/w/wholesale-gt2-20t-pulley-8mm-bore-aluminum.html
+2,GT2 60T Pulley 8mm bore aluminum,Gear Reduction,6mm belt width,3.00,6.00,https://www.aliexpress.com/w/wholesale-gt2-60t-pulley-8mm-bore.html
+2,GT2 80T Pulley 8mm bore aluminum,Gear Reduction,Must be aluminum not 3D printed,4.00,8.00,https://www.aliexpress.com/w/wholesale-gt2-80t-pulley-8mm-bore-aluminum.html
+5,GT2 Open Belt PU steel core 6mm (meters),Gear Reduction,"White PU, cut to length",1.20,6.00,https://www.aliexpress.com/w/wholesale-gt2-belt-steel-core-6mm-open.html
+1,GT2 Belt Clamp Kit,Gear Reduction,Copper buckles for open-loop ends,3.00,3.00,https://www.aliexpress.com/w/wholesale-gt2-belt-clamp-6mm.html
+1,Raspberry Pi 5 4GB,Compute & Electronics,Executor — receives commands from PC,60.00,60.00,https://www.pishop.us/
+1,Arduino Mega 2560 Clone,Compute & Electronics,ATmega16U2 USB chip (not CH340),8.00,8.00,https://www.aliexpress.com/w/wholesale-arduino-mega-2560-atmega16u2.html
+1,24V 10A DC Power Supply,Compute & Electronics,240W minimum switching PSU,12.00,12.00,https://www.aliexpress.com/w/wholesale-24v-10a-switching-power-supply.html
+1,5V 3A USB-C Power Supply,Compute & Electronics,Dedicated for RPi5 only,6.00,6.00,https://www.aliexpress.com/w/wholesale-5v-3a-usb-c-power-supply.html
+1,22mm E-Stop Button NC,Compute & Electronics,"Red mushroom, twist-release, normally closed",3.00,3.00,https://www.aliexpress.com/w/wholesale-22mm-emergency-stop-button-NC.html
+10,KW11-3Z Limit Switch SPDT,Compute & Electronics,Wire to NC terminal only — fail-safe,0.30,3.00,https://www.aliexpress.com/w/wholesale-kw11-3z-limit-switch.html
+1,8-Channel Opto-Isolated Relay Board,Compute & Electronics,Must be opto-isolated,4.00,4.00,https://www.aliexpress.com/w/wholesale-8-channel-relay-opto-isolated-5v.html
+1,Logic Level Converter 4-ch bidirectional,Compute & Electronics,3.3V to 5V bidirectional,1.00,1.00,https://www.aliexpress.com/w/wholesale-logic-level-converter-3.3v-5v-bidirectional.html
+5,1000uF 35V Electrolytic Capacitor,Compute & Electronics,One per NEMA 23 driver plus spares,0.20,1.00,https://www.aliexpress.com/w/wholesale-1000uf-35v-electrolytic-capacitor.html
+1,Ferrite Core Kit snap-on,Compute & Electronics,Snap-on type for USB cables,2.00,2.00,https://www.aliexpress.com/w/wholesale-ferrite-bead-kit-usb-cable.html
+1,SendCutSend 3mm 6061-T6 Aluminum,Structure & Hardware,"Base plate, 2x Link1, 2x Link2, brackets, mounts",130.00,130.00,https://sendcutsend.com/
+2,51100 Thrust Bearing 10x24x9mm,Structure & Hardware,"10mm bore, 24mm OD, 1 spare",2.00,4.00,https://www.aliexpress.com/w/wholesale-51100-thrust-bearing.html
+20,M5 x 40mm Aluminum Hex Standoff,Structure & Hardware,"Hex, male-female",0.80,16.00,https://www.aliexpress.com/w/wholesale-m5-aluminum-standoff-40mm-hex.html
+1,M3 M4 M5 Bolt and Nut Kit 500pc,Structure & Hardware,Socket head cap screws,8.00,8.00,https://www.aliexpress.com/w/wholesale-metric-bolt-assortment-m3-m4-m5.html
+1,Brass Heat-Set Insert Kit,Structure & Hardware,M3 M4 for PETG printed parts,5.00,5.00,https://www.aliexpress.com/w/wholesale-heat-set-insert-m3-m4-brass.html
+20,608ZZ Bearing 8x22x7mm,Structure & Hardware,"Buy 20, need 12",0.25,5.00,https://www.aliexpress.com/w/wholesale-608zz-bearing.html
+6,8mm Rigid Shaft Coupler aluminum,Structure & Hardware,Aluminum coupler,1.50,9.00,https://www.aliexpress.com/w/wholesale-8mm-rigid-shaft-coupler-aluminum.html
+1,Fender Washer Kit M3 M4 M5,Structure & Hardware,Under bolts touching PETG,4.00,4.00,https://www.aliexpress.com/w/wholesale-fender-washer-assortment-metric.html
+1,Intel RealSense D435 (used),Vision & Sensing,"Check USB-C port condition, target $80-100",90.00,90.00,https://www.ebay.com/sch/i.html?_nkw=intel+realsense+d435
+1,1kg Load Cell with HX711 Amplifier,Vision & Sensing,Tare every grip cycle,3.00,3.00,https://www.aliexpress.com/w/wholesale-1kg-load-cell-hx711.html
+1,USB Microphone,Vision & Sensing,Must be USB — RPi5 has no analog audio in,8.00,8.00,https://www.aliexpress.com/w/wholesale-usb-microphone-mini.html
+3,PETG Filament 1kg spool,Filament,"230-240C nozzle, structural covers and wrist only",12.00,36.00,https://www.aliexpress.com/w/wholesale-petg-filament-1kg.html
+1,TPU 95A Filament 500g spool,Filament,Gripper fingertips only,8.00,8.00,https://www.aliexpress.com/w/wholesale-tpu-95a-filament-500g.html
+1,Silicone Wire Kit 22AWG 26AWG,Wiring & Cables,"High-flex, 200C+ rated",6.00,6.00,https://www.aliexpress.com/w/wholesale-silicone-wire-kit-22awg-26awg.html
+5,Shielded Twisted Pair 24AWG (meters),Wiring & Cables,For limit switch runs,0.80,4.00,https://www.aliexpress.com/w/wholesale-shielded-twisted-pair-24awg.html
+1,JST-XH Connector Kit,Wiring & Cables,2.54mm pitch,4.00,4.00,https://www.aliexpress.com/w/wholesale-jst-xh-connector-kit.html
+1,Cable Drag Chain 10x15mm 1m,Wiring & Cables,Check bend radius fits wire bundle,4.00,4.00,https://www.aliexpress.com/w/wholesale-cable-drag-chain-10x15.html
+1,Braided Cable Sleeve Kit,Wiring & Cables,Assorted sizes,3.00,3.00,https://www.aliexpress.com/w/wholesale-braided-cable-sleeve-assortment.html
+1,Heat Shrink Tubing Kit,Wiring & Cables,Assorted sizes,2.00,2.00,https://www.aliexpress.com/w/wholesale-heat-shrink-tubing-assortment.html
+1,Copper Ground Bus Bar 10-way,Wiring & Cables,Star ground point,3.00,3.00,https://www.aliexpress.com/w/wholesale-ground-bus-bar-copper-10-way.html
+1,12-Way Terminal Block 10A,Wiring & Cables,Power distribution,2.00,2.00,https://www.aliexpress.com/w/wholesale-terminal-block-12-way-10a.html

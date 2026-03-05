@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ARTIC-6 Wiring Diagram</title>
+<style>
+  body { background: #fff; margin: 0; display: flex; justify-content: center; }
+</style>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 780" width="1100" height="780" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#333"/></marker>
+    <marker id="redarrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#c0392b"/></marker>
+    <marker id="bluearrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#2980b9"/></marker>
+    <marker id="greenarrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#27ae60"/></marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1100" height="780" fill="#fafafa" rx="8"/>
+
+  <!-- Title -->
+  <text x="550" y="35" text-anchor="middle" font-size="22" font-weight="bold" fill="#222">ARTIC-6 — Wiring Diagram</text>
+  <text x="550" y="55" text-anchor="middle" font-size="12" fill="#888">Power Zone (left) — 50mm min separation — Logic Zone (right)</text>
+
+  <!-- Zone backgrounds -->
+  <rect x="20" y="70" width="510" height="690" rx="12" fill="#fff5f5" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="275" y="95" text-anchor="middle" font-size="14" font-weight="bold" fill="#c0392b">⚡ POWER ZONE (24V)</text>
+
+  <rect x="570" y="70" width="510" height="690" rx="12" fill="#f0f7ff" stroke="#2980b9" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="825" y="95" text-anchor="middle" font-size="14" font-weight="bold" fill="#2471a3">🔵 LOGIC ZONE (3.3V / 5V)</text>
+
+  <!-- Separation zone -->
+  <rect x="530" y="70" width="40" height="690" fill="#f5f5f5" rx="0"/>
+  <text x="550" y="420" text-anchor="middle" font-size="10" fill="#aaa" transform="rotate(-90,550,420)">50mm+ SEPARATION</text>
+
+  <!-- ==================== POWER ZONE ==================== -->
+
+  <!-- Wall AC -->
+  <rect x="40" y="110" width="100" height="40" rx="6" fill="#f39c12" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="90" y="135" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">WALL AC</text>
+
+  <!-- E-Stop -->
+  <rect x="190" y="110" width="100" height="40" rx="20" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+  <text x="240" y="128" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">E-STOP</text>
+  <text x="240" y="142" text-anchor="middle" font-size="8" fill="#fdd">NC — hardware cutoff</text>
+  <line x1="140" y1="130" x2="190" y2="130" stroke="#e67e22" stroke-width="2.5" marker-end="url(#redarrow)"/>
+
+  <!-- 24V PSU -->
+  <rect x="40" y="180" width="200" height="50" rx="8" fill="#2c3e50" stroke="#1a252f" stroke-width="1.5"/>
+  <text x="140" y="202" text-anchor="middle" font-size="12" font-weight="bold" fill="#ecf0f1">24V 10A PSU</text>
+  <text x="140" y="218" text-anchor="middle" font-size="9" fill="#95a5a6">240W Switching — Mean Well style</text>
+  <line x1="240" y1="150" x2="140" y2="180" stroke="#c0392b" stroke-width="2" marker-end="url(#redarrow)"/>
+
+  <!-- 24V Rail label -->
+  <line x1="140" y1="230" x2="140" y2="270" stroke="#e74c3c" stroke-width="3"/>
+  <text x="155" y="255" font-size="9" fill="#c0392b" font-weight="bold">24V RAIL</text>
+
+  <!-- TMC2209 Drivers -->
+  <!-- Driver 1 -->
+  <rect x="40" y="280" width="140" height="55" rx="6" fill="#8e44ad" stroke="#6c3483" stroke-width="1.2"/>
+  <text x="110" y="300" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">TMC2209 #1</text>
+  <text x="110" y="314" text-anchor="middle" font-size="8" fill="#d7bde2">Axis 1 — Base Rotation</text>
+  <text x="110" y="327" text-anchor="middle" font-size="7" fill="#d7bde2">NEMA 23 — 2.8A</text>
+  <line x1="140" y1="270" x2="110" y2="280" stroke="#e74c3c" stroke-width="1.5"/>
+
+  <!-- Driver 2 -->
+  <rect x="40" y="345" width="140" height="55" rx="6" fill="#8e44ad" stroke="#6c3483" stroke-width="1.2"/>
+  <text x="110" y="365" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">TMC2209 #2</text>
+  <text x="110" y="379" text-anchor="middle" font-size="8" fill="#d7bde2">Axis 2 — Shoulder</text>
+  <text x="110" y="392" text-anchor="middle" font-size="7" fill="#d7bde2">NEMA 23 — 2.8A</text>
+  <line x1="140" y1="270" x2="110" y2="345" stroke="#e74c3c" stroke-width="1.5"/>
+
+  <!-- Driver 3 -->
+  <rect x="40" y="410" width="140" height="55" rx="6" fill="#8e44ad" stroke="#6c3483" stroke-width="1.2"/>
+  <text x="110" y="430" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">TMC2209 #3</text>
+  <text x="110" y="444" text-anchor="middle" font-size="8" fill="#d7bde2">Axis 3 — Elbow</text>
+  <text x="110" y="457" text-anchor="middle" font-size="7" fill="#d7bde2">NEMA 23 — 2.8A</text>
+  <line x1="140" y1="270" x2="110" y2="410" stroke="#e74c3c" stroke-width="1.5"/>
+
+  <!-- Driver 4 -->
+  <rect x="40" y="475" width="140" height="50" rx="6" fill="#7d3c98" stroke="#6c3483" stroke-width="1.2"/>
+  <text x="110" y="495" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">TMC2209 #4</text>
+  <text x="110" y="508" text-anchor="middle" font-size="8" fill="#d7bde2">Axis 4 — Wrist Pitch</text>
+  <text x="110" y="519" text-anchor="middle" font-size="7" fill="#d7bde2">NEMA 17 — 2A</text>
+  <line x1="140" y1="270" x2="110" y2="475" stroke="#e74c3c" stroke-width="1.5"/>
+
+  <!-- Driver 5 -->
+  <rect x="40" y="535" width="140" height="50" rx="6" fill="#7d3c98" stroke="#6c3483" stroke-width="1.2"/>
+  <text x="110" y="555" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">TMC2209 #5</text>
+  <text x="110" y="568" text-anchor="middle" font-size="8" fill="#d7bde2">Axis 5 — Wrist Roll</text>
+  <text x="110" y="579" text-anchor="middle" font-size="7" fill="#d7bde2">NEMA 17 — 2A</text>
+  <line x1="140" y1="270" x2="110" y2="535" stroke="#e74c3c" stroke-width="1.5"/>
+
+  <!-- Driver 6 -->
+  <rect x="40" y="595" width="140" height="50" rx="6" fill="#7d3c98" stroke="#6c3483" stroke-width="1.2"/>
+  <text x="110" y="615" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">TMC2209 #6</text>
+  <text x="110" y="628" text-anchor="middle" font-size="8" fill="#d7bde2">Axis 6 — Gripper</text>
+  <text x="110" y="639" text-anchor="middle" font-size="7" fill="#d7bde2">NEMA 17 — 2A</text>
+  <line x1="140" y1="270" x2="110" y2="595" stroke="#e74c3c" stroke-width="1.5"/>
+
+  <!-- Capacitors -->
+  <text x="195" y="295" font-size="8" fill="#e74c3c">1000µF</text>
+  <text x="195" y="360" font-size="8" fill="#e74c3c">1000µF</text>
+  <text x="195" y="425" font-size="8" fill="#e74c3c">1000µF</text>
+
+  <!-- Motors (right side of drivers) -->
+  <rect x="250" y="285" width="120" height="45" rx="6" fill="#555" stroke="#333" stroke-width="1.2"/>
+  <text x="310" y="305" text-anchor="middle" font-size="9" font-weight="bold" fill="#fff">NEMA 23 — M1</text>
+  <text x="310" y="320" text-anchor="middle" font-size="8" fill="#bbb">A+/A- B+/B-</text>
+  <line x1="180" y1="307" x2="250" y2="307" stroke="#8e44ad" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="250" y="350" width="120" height="45" rx="6" fill="#555" stroke="#333" stroke-width="1.2"/>
+  <text x="310" y="370" text-anchor="middle" font-size="9" font-weight="bold" fill="#fff">NEMA 23 — M2</text>
+  <text x="310" y="385" text-anchor="middle" font-size="8" fill="#bbb">A+/A- B+/B-</text>
+  <line x1="180" y1="372" x2="250" y2="372" stroke="#8e44ad" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="250" y="415" width="120" height="45" rx="6" fill="#555" stroke="#333" stroke-width="1.2"/>
+  <text x="310" y="435" text-anchor="middle" font-size="9" font-weight="bold" fill="#fff">NEMA 23 — M3</text>
+  <text x="310" y="450" text-anchor="middle" font-size="8" fill="#bbb">A+/A- B+/B-</text>
+  <line x1="180" y1="437" x2="250" y2="437" stroke="#8e44ad" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="250" y="480" width="120" height="40" rx="6" fill="#666" stroke="#444" stroke-width="1.2"/>
+  <text x="310" y="498" text-anchor="middle" font-size="9" font-weight="bold" fill="#fff">NEMA 17 — M4</text>
+  <line x1="180" y1="500" x2="250" y2="500" stroke="#7d3c98" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="250" y="530" width="120" height="40" rx="6" fill="#666" stroke="#444" stroke-width="1.2"/>
+  <text x="310" y="548" text-anchor="middle" font-size="9" font-weight="bold" fill="#fff">NEMA 17 — M5</text>
+  <line x1="180" y1="560" x2="250" y2="560" stroke="#7d3c98" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="250" y="580" width="120" height="40" rx="6" fill="#666" stroke="#444" stroke-width="1.2"/>
+  <text x="310" y="598" text-anchor="middle" font-size="9" font-weight="bold" fill="#fff">NEMA 17 — M6</text>
+  <line x1="180" y1="620" x2="250" y2="620" stroke="#7d3c98" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 8ch Relay -->
+  <rect x="250" y="660" width="150" height="45" rx="6" fill="#e67e22" stroke="#d35400" stroke-width="1.2"/>
+  <text x="325" y="680" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">8-CH OPTO RELAY</text>
+  <text x="325" y="696" text-anchor="middle" font-size="8" fill="#fde3cf">Motor enable sequencing</text>
+
+  <!-- Star Ground -->
+  <rect x="40" y="670" width="180" height="60" rx="8" fill="#f1c40f" stroke="#d4ac0f" stroke-width="2"/>
+  <text x="130" y="693" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">⏚ STAR GROUND BUS BAR</text>
+  <text x="130" y="708" text-anchor="middle" font-size="8" fill="#7d6608">All motor GNDs + Arduino GND + RPi GND</text>
+  <text x="130" y="720" text-anchor="middle" font-size="8" fill="#7d6608">→ Single point → PSU negative terminal</text>
+
+  <!-- Ground lines from drivers -->
+  <line x1="70" y1="645" x2="70" y2="670" stroke="#d4ac0f" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <line x1="310" y1="325" x2="310" y2="340" stroke="#d4ac0f" stroke-width="0.8" stroke-dasharray="2,2"/>
+
+  <!-- ==================== LOGIC ZONE ==================== -->
+
+  <!-- 5V USB-C PSU -->
+  <rect x="590" y="110" width="160" height="45" rx="8" fill="#27ae60" stroke="#1e8449" stroke-width="1.5"/>
+  <text x="670" y="132" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">5V 3A USB-C PSU</text>
+  <text x="670" y="146" text-anchor="middle" font-size="8" fill="#d5f5e3">Dedicated — RPi only</text>
+
+  <!-- Raspberry Pi 5 -->
+  <rect x="590" y="180" width="200" height="80" rx="8" fill="#2ecc71" stroke="#27ae60" stroke-width="2"/>
+  <text x="690" y="205" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">Raspberry Pi 5</text>
+  <text x="690" y="222" text-anchor="middle" font-size="9" fill="#d5f5e3">4GB — Whisper + Ollama + YOLO + ROS2</text>
+  <text x="690" y="238" text-anchor="middle" font-size="8" fill="#d5f5e3">Executor node — sends serial commands</text>
+  <text x="690" y="252" text-anchor="middle" font-size="8" fill="#a9dfbf">USB3 (blue): RealSense | USB2 (black): Arduino</text>
+  <line x1="670" y1="155" x2="670" y2="180" stroke="#27ae60" stroke-width="2" marker-end="url(#greenarrow)"/>
+
+  <!-- Logic Level Converter -->
+  <rect x="830" y="195" width="110" height="40" rx="6" fill="#3498db" stroke="#2980b9" stroke-width="1.2"/>
+  <text x="885" y="213" text-anchor="middle" font-size="9" font-weight="bold" fill="#fff">LEVEL CONV</text>
+  <text x="885" y="226" text-anchor="middle" font-size="7" fill="#d6eaf8">3.3V ↔ 5V bidir</text>
+  <line x1="790" y1="215" x2="830" y2="215" stroke="#2980b9" stroke-width="1.5" marker-end="url(#bluearrow)"/>
+
+  <!-- Arduino Mega -->
+  <rect x="590" y="300" width="220" height="100" rx="8" fill="#2980b9" stroke="#2471a3" stroke-width="2"/>
+  <text x="700" y="325" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">Arduino Mega 2560</text>
+  <text x="700" y="345" text-anchor="middle" font-size="9" fill="#d6eaf8">Real-time stepper pulse generation</text>
+  <text x="700" y="365" text-anchor="middle" font-size="8" fill="#aed6f1">D2-D7: STEP | D8-D13: DIR</text>
+  <text x="700" y="380" text-anchor="middle" font-size="8" fill="#aed6f1">D22-D27: ENABLE | D28-D33: LIMIT SW</text>
+  <text x="700" y="393" text-anchor="middle" font-size="8" fill="#aed6f1">A0-A1: HX711 Load Cell</text>
+
+  <!-- USB connection RPi → Arduino -->
+  <line x1="690" y1="260" x2="690" y2="300" stroke="#2c3e50" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="705" y="283" font-size="8" fill="#2c3e50" font-weight="bold">USB 2.0</text>
+  <rect x="672" y="272" width="50" height="12" rx="3" fill="#f9e79f" stroke="#d4ac0f" stroke-width="0.8"/>
+  <text x="697" y="281" text-anchor="middle" font-size="7" fill="#7d6608">ferrite</text>
+
+  <!-- STEP/DIR/EN lines from Arduino to drivers (crossing zone boundary) -->
+  <line x1="590" y1="350" x2="540" y2="350" stroke="#2980b9" stroke-width="2"/>
+  <line x1="540" y1="300" x2="540" y2="640" stroke="#2980b9" stroke-width="2"/>
+  <text x="545" y="465" font-size="8" fill="#2980b9" font-weight="bold" transform="rotate(-90,548,465)">STEP / DIR / EN signals</text>
+  <!-- Individual connections to each driver -->
+  <line x1="540" y1="307" x2="180" y2="307" stroke="#2980b9" stroke-width="1" stroke-dasharray="4,2"/>
+  <line x1="540" y1="372" x2="180" y2="372" stroke="#2980b9" stroke-width="1" stroke-dasharray="4,2"/>
+  <line x1="540" y1="437" x2="180" y2="437" stroke="#2980b9" stroke-width="1" stroke-dasharray="4,2"/>
+  <line x1="540" y1="500" x2="180" y2="500" stroke="#2980b9" stroke-width="1" stroke-dasharray="4,2"/>
+  <line x1="540" y1="560" x2="180" y2="560" stroke="#2980b9" stroke-width="1" stroke-dasharray="4,2"/>
+  <line x1="540" y1="620" x2="180" y2="620" stroke="#2980b9" stroke-width="1" stroke-dasharray="4,2"/>
+
+  <!-- Limit Switches -->
+  <rect x="590" y="430" width="200" height="80" rx="8" fill="#e8f8f5" stroke="#1abc9c" stroke-width="1.5"/>
+  <text x="690" y="450" text-anchor="middle" font-size="11" font-weight="bold" fill="#16a085">LIMIT SWITCHES (6×)</text>
+  <text x="690" y="467" text-anchor="middle" font-size="8" fill="#1abc9c">KW11-3Z — wired NC (fail-safe)</text>
+  <text x="690" y="482" text-anchor="middle" font-size="8" fill="#1abc9c">COM → +5V | NC → Arduino D28-D33</text>
+  <text x="690" y="497" text-anchor="middle" font-size="8" fill="#1abc9c">10kΩ pull-down to GND on each pin</text>
+  <line x1="690" y1="400" x2="690" y2="430" stroke="#1abc9c" stroke-width="1.5" marker-end="url(#greenarrow)"/>
+
+  <!-- HX711 Load Cell -->
+  <rect x="830" y="430" width="110" height="50" rx="6" fill="#f5eef8" stroke="#8e44ad" stroke-width="1.2"/>
+  <text x="885" y="450" text-anchor="middle" font-size="9" font-weight="bold" fill="#6c3483">HX711</text>
+  <text x="885" y="464" text-anchor="middle" font-size="7" fill="#8e44ad">Load Cell Amp</text>
+  <text x="885" y="474" text-anchor="middle" font-size="7" fill="#8e44ad">A0: DOUT, A1: SCK</text>
+  <line x1="810" y1="375" x2="885" y2="430" stroke="#8e44ad" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- RealSense Camera -->
+  <rect x="830" y="120" width="150" height="55" rx="8" fill="#5dade2" stroke="#2e86c1" stroke-width="1.5"/>
+  <text x="905" y="142" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">Intel RealSense</text>
+  <text x="905" y="156" text-anchor="middle" font-size="8" fill="#d6eaf8">D435 Depth Camera</text>
+  <text x="905" y="168" text-anchor="middle" font-size="7" fill="#ebf5fb">USB 3.0 (blue port) → RPi5</text>
+  <line x1="830" y1="150" x2="790" y2="195" stroke="#5dade2" stroke-width="1.5" stroke-dasharray="4,2"/>
+
+  <!-- USB Microphone -->
+  <rect x="830" y="300" width="110" height="40" rx="6" fill="#aed6f1" stroke="#5dade2" stroke-width="1.2"/>
+  <text x="885" y="318" text-anchor="middle" font-size="9" font-weight="bold" fill="#2471a3">USB MIC</text>
+  <text x="885" y="332" text-anchor="middle" font-size="7" fill="#2980b9">Whisper STT input</text>
+  <line x1="830" y1="320" x2="810" y2="320" stroke="#5dade2" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Connection to relay -->
+  <line x1="590" y1="385" x2="540" y2="385" stroke="#e67e22" stroke-width="1"/>
+  <line x1="540" y1="385" x2="540" y2="682" stroke="#e67e22" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="540" y1="682" x2="400" y2="682" stroke="#e67e22" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Legend -->
+  <rect x="590" y="540" width="200" height="180" rx="8" fill="#fff" stroke="#ccc" stroke-width="1"/>
+  <text x="690" y="562" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">Legend</text>
+  <line x1="610" y1="578" x2="650" y2="578" stroke="#e74c3c" stroke-width="2.5"/>
+  <text x="660" y="582" font-size="9" fill="#333">24V Power</text>
+  <line x1="610" y1="598" x2="650" y2="598" stroke="#2980b9" stroke-width="2"/>
+  <text x="660" y="602" font-size="9" fill="#333">5V Logic / Signal</text>
+  <line x1="610" y1="618" x2="650" y2="618" stroke="#27ae60" stroke-width="2"/>
+  <text x="660" y="622" font-size="9" fill="#333">5V Dedicated Power</text>
+  <line x1="610" y1="638" x2="650" y2="638" stroke="#8e44ad" stroke-width="2"/>
+  <text x="660" y="642" font-size="9" fill="#333">Motor Coil Wires</text>
+  <line x1="610" y1="658" x2="650" y2="658" stroke="#d4ac0f" stroke-width="2"/>
+  <text x="660" y="662" font-size="9" fill="#333">Ground (Star)</text>
+  <line x1="610" y1="678" x2="650" y2="678" stroke="#333" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="660" y="682" font-size="9" fill="#333">USB / Data</text>
+  <rect x="610" y="693" width="40" height="12" rx="3" fill="#f9e79f" stroke="#d4ac0f" stroke-width="0.8"/>
+  <text x="660" y="703" font-size="9" fill="#333">Ferrite Bead</text>
+
+  <!-- Key callouts -->
+  <rect x="830" y="540" width="220" height="180" rx="8" fill="#fef9e7" stroke="#f4d03f" stroke-width="1"/>
+  <text x="940" y="562" text-anchor="middle" font-size="11" font-weight="bold" fill="#7d6608">⚠ Critical Rules</text>
+  <text x="842" y="582" font-size="8" fill="#333">• E-Stop is HARDWARE — cuts 24V rail</text>
+  <text x="842" y="598" font-size="8" fill="#333">• All limit switches wired NC (fail-safe)</text>
+  <text x="842" y="614" font-size="8" fill="#333">• Star ground — never daisy-chain</text>
+  <text x="842" y="630" font-size="8" fill="#333">• 50mm+ between power and logic zones</text>
+  <text x="842" y="646" font-size="8" fill="#333">• Ferrite bead on Arduino↔RPi USB</text>
+  <text x="842" y="662" font-size="8" fill="#333">• 1000µF cap on each NEMA 23 driver</text>
+  <text x="842" y="678" font-size="8" fill="#333">• RealSense on USB3 ONLY (blue port)</text>
+  <text x="842" y="694" font-size="8" fill="#333">• RPi on dedicated 5V PSU (not 24V)</text>
+  <text x="842" y="710" font-size="8" fill="#333">• TMC2209: BTT/Fysetc only, no clones</text>
+
+</svg>
+</body>
+</html>
