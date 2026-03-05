@@ -41,3 +41,10 @@ logs/
 secrets/
 *.pem
 *.key
+
+# Private / internal files
+archive/
+WHERE_WE_LEFT_OFF.md
+MASTER_REFERENCE.md
+docs/hackclub_application.md
+docs/social_media_plan.md
