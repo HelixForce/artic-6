@@ -138,36 +138,104 @@
 
 ---
 
-## GRAND TOTAL v0.3 (AliExpress)
+## REALISTIC ALL-IN COST
 
-| Category | Amazon (v0.2) | AliExpress (v0.3) | Savings |
-|----------|---------------|-------------------|--------|
-| Motors + Drivers | $166 | **$84** | -$82 |
-| Gear Reduction | $56 | **$29** | -$27 |
-| Compute + Electronics | $165 | **$100** | -$65 |
-| Structure + Hardware | $301 | **$236** | -$65 |
-| Vision + Sensing | $130 | **$101** | -$29 |
-| Filament | $82 | **$44** | -$38 |
-| Wiring | $85 | **$28** | -$57 |
-| **Parts Subtotal** | **$985** | **$622** | **-$363** |
-| Shipping (AliExpress ~$30-50) | — | ~$40 | |
-| **TOTAL WITH SHIPPING** | **$985** | **~$662** | **-$323** |
+> **This is the honest total** — including tools, shipping, tax, consumables, and contingency.
+> Most BOMs hide these. I'm not hiding anything.
+
+### Parts List (Core Components)
+
+| Category | Low Est. | High Est. |
+|----------|----------|-----------|
+| Core Parts (Motors, Electronics, Structure) | $580 | $640 |
+| 3D Printing Filament (PETG + TPU) | $60 | $82 |
+| SendCutSend Aluminum Cutting | $110 | $150 |
+| **Parts Subtotal** | **$750** | **$872** |
+
+### Hidden & Missed Costs (What Most BOMs Don't Show)
+
+| Category | Low Est. | High Est. |
+|----------|----------|-----------|
+| Shipping — AliExpress | $18 | $35 |
+| Shipping — Amazon | $0 | $20 |
+| Sales Tax (~8%) | $45 | $70 |
+| Tools (soldering iron, multimeter, crimpers) | $0 | $132 |
+| Consumables (solder, flux, threadlocker, grease) | $33 | $58 |
+| RPi Essentials (SD card, cooler, USB hub) | $30 | $48 |
+| Prototyping (breadboard, jumpers, caps) | $17 | $28 |
+| Installation (desk mount, velcro) | $14 | $25 |
+| **Hidden Costs Subtotal** | **$157** | **$416** |
+
+### Spares & Contingency
+
+| Item | Low Est. | High Est. |
+|------|----------|-----------|
+| Spare NEMA 17 Motor (1x) | $12 | $12 |
+| Spare TMC2209 Driver (2x) | $14 | $14 |
+| DOA / Wrong Parts | $20 | $40 |
+| Failed Prints / Wasted Filament | $15 | $30 |
+| Oops Fund | $20 | $40 |
+| **Spares & Contingency Subtotal** | **$81** | **$136** |
+
+---
+
+## 💰 GRAND TOTAL — REALISTIC
+
+| | Low | High |
+|--|-----|------|
+| Parts List (accounted) | $750 | $872 |
+| Hidden / Missed Costs | $157 | $416 |
+| Spares & Contingency | $81 | $136 |
+| **GRAND TOTAL** | **$988** | **$1,424** |
+
+> If you own tools already (soldering iron, multimeter, wire strippers): subtract ~$100.
+> Realistic midpoint estimate: **~$1,100-$1,200**.
+
+---
+
+## Phased Buying Plan
+
+| Phase | What | Cost | When |
+|-------|------|------|------|
+| **1** | Fusion 360 Design | FREE | Month 1 |
+| **2** | Structure & Motors | $434 | Month 1-2 |
+| **3** | Electronics & Power | $147 | Month 2 |
+| **4** | Brain & Senses | $268 | Month 2-3 |
+| **5** | Tools, Consumables, Spares | $223 | Ongoing |
+| | **TOTAL** | **$1,072** | |
 
 ---
 
 ## Blueprint Grant Request: $350
 
-| Part | AliExpress Cost |
-|------|----------------|
-| Motors + Drivers | $84 |
-| Gear Reduction | $29 |
-| Electronics (minus RPi5) | $40 |
-| Structure (minus SendCutSend) | $51 |
-| Wiring | $28 |
-| Shipping | ~$40 |
-| **Phase 2 Total** | **~$272** |
-| Buffer for price changes | ~$78 |
-| **Request** | **$350** |
+**I'm not asking for the full $1,100. I'm asking for $350 to cover Phase 2 motion components.**
 
-> Requesting $350 (down from $380) — AliExpress pricing makes this more efficient.
-> SendCutSend ($185) and RPi5 ($60) are self-funded.
+| What Grant Covers | Cost |
+|-------------------|------|
+| 3× NEMA 23 Steppers | $36 |
+| 3× NEMA 17 Steppers | $24 |
+| 6× TMC2209 Drivers | $24 |
+| GT2 Pulleys + Belt | $42 |
+| Bolts, bearings, standoffs | $42 |
+| Wiring supplies | $28 |
+| Shipping (AliExpress) | $35 |
+| Buffer for price changes | $119 |
+| **Grant Request** | **$350** |
+
+### What I'm Self-Funding
+
+| What I Pay For | Cost |
+|----------------|------|
+| SendCutSend aluminum | $130 |
+| Raspberry Pi 5 (4GB) | $60 |
+| Intel RealSense D435 (used) | $95 |
+| RPi essentials (SD, cooler, hub) | $46 |
+| 24V PSU + Arduino + E-stop | $57 |
+| Filament (PETG + TPU) | $82 |
+| All tools (soldering, etc.) | $55 |
+| All consumables | $58 |
+| Spares & contingency | $136 |
+| **My Contribution** | **~$719** |
+
+> **Total project: ~$1,100 | Grant: $350 | Self-funded: ~$750**
+> I'm covering 68% of the project myself.
