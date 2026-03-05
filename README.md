@@ -56,7 +56,7 @@ Zero cloud. Zero API keys. Zero monthly cost.
 
 ![Wiring Diagram](docs/wiring_diagram.svg)
 
-Full wiring details: [docs/wiring_diagram.md](docs/wiring_diagram.md)
+[Detailed Wiring & Safety Strategy](./docs/wiring_diagram.pdf) | Full wiring details: [docs/wiring_diagram.md](docs/wiring_diagram.md)
 
 ---
 
@@ -174,7 +174,8 @@ Full BOM with shopping links: [bom.csv](bom.csv) | Detailed specs: [docs/bom.md]
 - [Bill of Materials (CSV)](bom.csv) — Every part with qty, price, and shopping link
 - [Bill of Materials (detailed)](docs/bom.md) — Full specs, notes, and warnings
 - [Build Journal](docs/build_journal.md) — Chronological progress log
-- [Wiring Diagram](docs/wiring_diagram.md) — Power zones, star ground, signal chain
+- [Wiring Diagram (PDF)](docs/wiring_diagram.pdf) — Printable wiring & safety strategy
+- [Wiring Diagram (text)](docs/wiring_diagram.md) — Power zones, star ground, signal chain
 - [Engineering Notes](docs/engineering_notes.md) — Lessons learned, failure analysis
 - [Firmware README](firmware/README.md) — Setup guide and full command reference
 
