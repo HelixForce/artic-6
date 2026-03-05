@@ -108,16 +108,16 @@ artic-6/
 
 ## Current Status
 
-**Phase 0: Planning** — ✅ Complete
+**Phase 0: Planning** — Complete
 - Full engineering review done
 - Critical issues identified and solutions documented
 - BOM finalized with verified ASINs
 
-**Phase 1: CAD Design** — 🔄 In Progress
+**Phase 1: CAD Design** — In Progress
 - Fusion 360 student license approved
 - Next: Base plate → Link 1 → Link 2 → Joint brackets
 
-**Phase 2: Fabrication** — ⏳ Pending
+**Phase 2: Fabrication** — Pending
 - SendCutSend for aluminum cutting
 - 3D printing for non-structural parts
 
