@@ -8,7 +8,8 @@
 ## Changelog — v0.3
 - Switched to AliExpress links where possible (30-50% cheaper)
 - Added direct AliExpress search links
-- Reduced total cost from $985 → $622
+- Reduced parts cost from $985 → $622 (core parts only)
+- Added realistic all-in cost section ($988-$1,424 including tools, shipping, tax, spares)
 
 ## Changelog — v0.2 (corrections from v0.1)
 
