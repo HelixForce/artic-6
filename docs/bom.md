@@ -8,7 +8,7 @@
 ## Changelog — v0.3
 - Switched to AliExpress links where possible (30-50% cheaper)
 - Added direct AliExpress search links
-- Reduced total cost from $985 → ~$750
+- Reduced total cost from $985 → $622
 
 ## Changelog — v0.2 (corrections from v0.1)
 
